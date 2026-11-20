@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskdev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Google+Sans+Flex&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Taskdev</h1>
+    <h2>Think, and To-Do Your Life</h2>
+    <br />
+    <form name="task_add">
+      <label for="task-input">Task</label>
+      <input
+        name="task-input"
+        id="task-name"
+        class="task-input"
+        required
+        placeholder="My-Task"
+      />
+      <br /><input type="date" name="due_date" id="due_date" /> <br /><select
+        name="priority"
+        class="priority_slct"
+        id="task_priority"
+        onchange="getPriority()"
+      >
+        <option style="background-color: rgb(4, 130, 4)" value="Low">
+          Low
+        </option>
+        <option style="background-color: rgb(213, 223, 11)" value="High">
+          High
+        </option>
+        <option style="background-color: rgb(128, 0, 0)" value="Urgent">
+          Urgent
+        </option>
+      </select>
+      <br /><textarea
+        id="task-description"
+        name="description"
+        rows="3"
+        placeholder="Add extra details or notes..."
+      ></textarea><br/>
+      <button
+        type="submit"
+        form="task-add"
+        id="task-btn"
+        class="task-add"
+      >Submit</button>
+    </form>
+  </body>
+</html>
